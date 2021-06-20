@@ -90,6 +90,7 @@
         - software-properties-common
         - nfs-common
         - vim
+        - docker-compose
 
     - name: Adiciona uma chave de assinatura apt para o Docker
       apt_key:
