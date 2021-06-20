@@ -182,7 +182,7 @@
   handlers:
     - name: docker status
       service: name=docker state=started
-
+  tasks:
     - name: Reinicia Serasa Server
       reboot:
         msg: "Reboot initiated by Ansible due to kernel updates"
