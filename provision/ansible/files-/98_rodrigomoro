@@ -1,0 +1,2 @@
+vagrant ALL=(ALL) NOPASSWD:ALL
+rodrigomoro ALL=(ALL) NOPASSWD:ALL
