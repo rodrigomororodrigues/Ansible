@@ -56,9 +56,9 @@
         group: rodrigomoro
         mode: '0755'
 
-    - name: Criando o arquivo 98_rodrigomoro
+    - name: Criando o arquivo 98_ansible
       copy:
-        src: files/98_rodrigmoro
+        src: files/98_ansible
         dest: /etc/sudoers.d
         mode: 0644
         
