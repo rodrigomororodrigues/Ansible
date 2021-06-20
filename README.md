@@ -23,4 +23,7 @@ cd Ansible/
 
 vagrant up
 
+User:rodrigomoro 
+pass:Rodrigo@SesaraCh@llenge
+
 
