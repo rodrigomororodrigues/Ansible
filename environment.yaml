@@ -5,4 +5,4 @@
   ipaddress: 172.16.0.100
   memory: 1024
   cpus: 1
-  provision: provision/ansible/serasalinux.yaml
+  provision: provision/ansible/serasaapp.yaml
