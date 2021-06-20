@@ -179,10 +179,6 @@
       command: swapoff -a
       when: ansible_swaptotal_mb > 0
 
-  handlers:
-    - name: docker status
-      service: name=docker state=started
-  tasks:
     - name: Reinicia Serasa Server
       reboot:
         msg: "Reboot initiated by Ansible due to kernel updates"
@@ -192,3 +188,8 @@
         post_reboot_delay: 30
         test_command: uptime
       when: reboot_required_file.stat.exists
+
+  handlers:
+    - name: docker status
+      service: name=docker state=started
+
