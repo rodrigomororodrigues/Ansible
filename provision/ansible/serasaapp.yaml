@@ -190,7 +190,7 @@
         test_command: whoami
 
 
-#  handlers:
-#    - name: docker status
-#      service: name=docker state=started
+  handlers:
+    - name: docker status
+      service: name=docker state=started
 
