@@ -16,7 +16,7 @@
       user:
         name: rodrigomoro
         shell: /bin/bash
-        password : $1$pXQa0sl/$JhTfnhiefaPGQFlD4xoem0
+        password : $1$S1lq.Zq3$3tG5U48mYd6VAYDUibsuc1
         
     - name: Instala pacotes que permitem que o apt seja usado sobre HTTPS
       apt:
