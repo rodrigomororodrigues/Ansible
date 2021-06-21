@@ -186,5 +186,14 @@
     - name: docker status
       service: name=docker state=started
 
+    - name: task name
+      shell:
+        cmd: docker-compose up -d 
+        chdir: docker/
+
+
+
+
+
 
 
