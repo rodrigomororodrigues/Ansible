@@ -91,6 +91,15 @@
        group: rodrigomoro
        mode: '0644'
 
+    - name: Recursively change ownership of a directory
+      ansible.builtin.file:
+       path: docker/
+       state: directory
+       recurse: yes
+       owner: rodrigomoro
+       group: rodrigmoro
+
+
 
     - name: Adiciona uma chave de assinatura apt para o Docker
       apt_key:
