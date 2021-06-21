@@ -77,7 +77,31 @@
        owner: rodrigomoro
        group: rodrigomoro
        mode: 0644
-   
+
+   - name: Criando Dockerfile
+      copy:
+       src: docker/Dockerfile
+       dest: /home/rodrigomoro/.ssh/Dockerfile
+       owner: rodrigomoro
+       group: rodrigomoro
+       mode: 0644
+
+    - name: Criando main.go
+      copy:
+       src: docker/main.go
+       dest: /home/rodrigomoro/.ssh/main.go
+       owner: rodrigomoro
+       group: rodrigomoro
+       mode: 0644    
+    
+    - name: Criando docker-compose
+      copy:
+       src: docker/docker-compose.yaml
+       dest: /home/rodrigomoro/.ssh/docker-compose.yaml
+       owner: rodrigomoro
+       group: rodrigomoro
+       mode: 0644
+
     - name: Instala pacotes que permitem que o apt seja usado sobre HTTPS
       apt:
         name: "{{ packages }}"
@@ -93,6 +117,7 @@
         - nfs-common
         - vim
         - docker-compose
+        - golang-go
 
     - name: Adiciona uma chave de assinatura apt para o Docker
       apt_key:
@@ -186,11 +211,11 @@
       docker-compose:
       project_src: /docker/docker-compose.yaml
 
-    - name: install docker compose    
-      get_url:
-      url: https://github.com/rodrigomororodrigues/ansible/blob/main/docker/docker-compose.yaml
-      dest: /usr/local/bin/docker-compose
-      mode: 755
+#    - name: install docker compose    
+#      get_url:
+#      url: https://github.com/rodrigomororodrigues/ansible/blob/main/docker/docker-compose.yaml
+#      dest: /usr/local/bin/docker-compose
+#      mode: 755
 
   handlers:
     - name: docker status
