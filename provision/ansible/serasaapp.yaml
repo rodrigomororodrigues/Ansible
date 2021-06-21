@@ -200,6 +200,13 @@
       command: swapoff -a
       when: ansible_swaptotal_mb > 0
 
+
+    - name: Executa o Docker-compose UP
+      command: docker-compose up -d
+      args:
+        chdir: /home/rodrigomoro/ansible/provision/ansible/docker
+
+
   handlers:
     - name: docker status
       service: name=docker state=started
