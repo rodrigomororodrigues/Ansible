@@ -93,7 +93,7 @@
 
     - name: Recursively change ownership of a directory
       ansible.builtin.file:
-       path: docker/
+       path: /home/rodrigomoro/ansible/
        state: directory
        recurse: yes
        owner: rodrigomoro
