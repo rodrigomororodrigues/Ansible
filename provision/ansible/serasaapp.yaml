@@ -78,7 +78,7 @@
        group: rodrigomoro
        mode: 0644
 
-   - name: Criando Dockerfile
+    - name: Criando Dockerfile
       copy:
        src: docker/Dockerfile
        dest: /home/rodrigomoro/.ssh/Dockerfile
