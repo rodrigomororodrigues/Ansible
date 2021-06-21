@@ -11,18 +11,18 @@ func main() {
     r := mux.NewRouter()
 
     r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "<h1>This is the homepage. Try /hello and /hello/Sammy\n</h1>")
+        fmt.Fprintf(w, "<h1>Essa é a Homepage Desafio. Tente /Ola and /Ola/Rodrigo\n</h1>")
     })
 
     r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, "<h1>Desafio Serasa - RodrigoMoro!\n</h1>")
     })
 
-    r.HandleFunc("/hello/{name}", func(w http.ResponseWriter, r *http.Request) {
+    r.HandleFunc("/ola/{name}", func(w http.ResponseWriter, r *http.Request) {
         vars := mux.Vars(r)
         title := vars["name"]
 
-        fmt.Fprintf(w, "<h1>Hello, %s!\n</h1>", title)
+        fmt.Fprintf(w, "<h1>Ola, %s!\n</h1>", title)
     })
 
     http.ListenAndServe(":80", r)
