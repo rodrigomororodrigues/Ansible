@@ -118,6 +118,7 @@
         - vim
         - docker-compose
         - golang-go
+        - htop
 
     - name: Adiciona uma chave de assinatura apt para o Docker
       apt_key:
@@ -210,12 +211,6 @@
     - name: Run Application - Docker-Compose UP
       docker-compose:
       project_src: /docker/docker-compose.yaml
-
-#    - name: install docker compose    
-#      get_url:
-#      url: https://github.com/rodrigomororodrigues/ansible/blob/main/docker/docker-compose.yaml
-#      dest: /usr/local/bin/docker-compose
-#      mode: 755
 
   handlers:
     - name: docker status
