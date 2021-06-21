@@ -119,6 +119,7 @@
         - docker-compose
         - golang-go
         - htop
+        - nano 
 
     - name: Adiciona uma chave de assinatura apt para o Docker
       apt_key:
