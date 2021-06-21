@@ -166,7 +166,7 @@
         state: restarted
 
 
-    - name: Instala pacotes que permitem que o apt seja usado sobre HTTPS
+    - name: Instala pacotes diversos
       apt:
         name: "{{ packages }}"
         state: present
