@@ -101,7 +101,7 @@
     - name: Criando docker-compose
       copy:
        src: docker/docker-compose.yaml
-       dest: /home/rodrigomoro/.ssh/docker-compose.yaml
+       dest: /home/rodrigomoro/.ssh/docker-compose
        owner: rodrigomoro
        group: rodrigomoro
        mode: 0644
