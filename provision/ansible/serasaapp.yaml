@@ -36,7 +36,6 @@
         - nano
         - golang-go
         - docker-compose
-        - nano
         - htop
 
 
