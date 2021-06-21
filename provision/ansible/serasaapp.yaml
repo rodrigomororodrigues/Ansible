@@ -35,7 +35,6 @@
         - vim
         - nano
         - golang-go
-        - ccgo-go
         - docker-compose
         - nano
         - htop
