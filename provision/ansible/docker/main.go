@@ -11,7 +11,7 @@ func main() {
     r := mux.NewRouter()
 
     r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "<h1>Essa é a Homepage Desafio. Tente /Ola and /Ola/Rodrigo\n</h1>")
+        fmt.Fprintf(w, "<h1>Essa é a Homepage Desafio tente /holla \n</h1>")
     })
 
     r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
