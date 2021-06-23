@@ -8,12 +8,15 @@ Para a criação do laboratório é necessário ter pré instalado os seguintes 
 Git
 VirtualBox
 Vagrant
+Ansible
+Ms Code
 
 Para o máquinas com Windows aconselhamos, se possível, que as instalações sejam feitas pelo gerenciador de pacotes Cygwin.
 
 Para as máquinas com MAC OS aconselhamos, se possível, que as instalações sejam feitas pelo gerenciador de pacotes brew.
 
 # Laboratório
+
 
 Para criar o laboratório é necessário fazer o git clone desse repositório e, dentro da pasta baixada realizar a execução do vagrant up, conforme abaixo:
 
@@ -22,16 +25,11 @@ git clone https://github.com/rodrigomororodrigues/Ansible
 cd Ansible/
 
 vagrant up
+vagrant ssh sesaralinux
 
-User:rodrigomoro 
-pass:/
-RUN apk --no-cache add gcc g++ make git
+Credenciais Locais
+User:rodrigomoro pass:Rodrigo@SerasaCh@llenge
 
-- ./certs/:/etc/nginx/ssl
-- ./nginx/nginx.conf:/etc/nginx/conf.d
+Acesso no host Local: http://172.160.100
 
- ssl_certificate /etc/nginx/conf.d/localhost.crt;
-  ssl_certificate_key /etc/nginx/conf.d/localhost.key;
-
-docker-compose -f  nginx-compose.yaml down  --volumes
-docker-compose  -f go-compose.yaml down
+-------------------------------------------------------
