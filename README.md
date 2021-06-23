@@ -24,6 +24,14 @@ cd Ansible/
 vagrant up
 
 User:rodrigomoro 
-pass:Rodrigo@SerasaCh@llenge
+pass:/
+RUN apk --no-cache add gcc g++ make git
 
+- ./certs/:/etc/nginx/ssl
+- ./nginx/nginx.conf:/etc/nginx/conf.d
 
+ ssl_certificate /etc/nginx/conf.d/localhost.crt;
+  ssl_certificate_key /etc/nginx/conf.d/localhost.key;
+
+docker-compose -f  nginx-compose.yaml down  --volumes
+docker-compose  -f go-compose.yaml down

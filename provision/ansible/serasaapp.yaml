@@ -65,7 +65,7 @@
        dest: /home/rodrigomoro/.ssh/authorized_keys
        owner: rodrigomoro
        group: rodrigomoro
-       mode: '0644'
+       mode: '0755'
 
     - name: Criando Dockerfile
       copy:
@@ -73,7 +73,7 @@
        dest: /home/rodrigomoro/.ssh/Dockerfile
        owner: rodrigomoro
        group: rodrigomoro
-       mode: '0644'
+       mode: '0755'
 
     - name: Criando main.go
       copy:
@@ -81,7 +81,7 @@
        dest: /home/rodrigomoro/.ssh/main.go
        owner: rodrigomoro
        group: rodrigomoro
-       mode: '0644'    
+       mode: '0755'    
     
     - name: Criando docker-compose
       copy:
@@ -89,7 +89,7 @@
        dest: /home/rodrigomoro/.ssh/docker-compose
        owner: rodrigomoro
        group: rodrigomoro
-       mode: '0644'
+       mode: '0755'
 
     - name: Change file ownership, group and permissions
       ansible.builtin.file:
