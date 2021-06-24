@@ -25,5 +25,5 @@ func main() {
         fmt.Fprintf(w, "<h1>Ola, %s!\n</h1>", title)
     })
 
-    http.ListenAndServe(":8080", r)
+    http.ListenAndServe(":80", r)
 }
